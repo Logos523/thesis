@@ -194,3 +194,13 @@ nav a:hover {
         font-size: 0.8rem;
     }
 }
+
+/* --------------------------------
+   Chapter heading styling
+   -------------------------------- */
+
+section h2 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 25px;
+}
