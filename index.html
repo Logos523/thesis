@@ -152,7 +152,9 @@
             <h3>Audio Production</h3>
         
             <p>I will only touch on this very briefly, as this has more to do with sound design, editing and composition than game programming (although technically speaking, the music is also programmed in a sequencer!). For sound effects, I have used free-to-use (and no-attribution-needed) sound effects from online resources, and then edited, combined and exported these in a uniform WAV format as assets ready for use. The editing phase has mostly consisted of cutting, moving and applying various effects to the waveform. I have mainly been using the audio editor Audacity for this. My aim has been to achieve distinct, easily recognizable sounds for spells, impacts and movement (made to match the visual effects in the game), as well as non-intrusive ambience in the form of wind that increases in intensity with player altitude, along with the eerie sounds of loon birds. The UI button click sounds are very straightforward and functional.</p>
-        
+
+            <img src="images/ShieldShatterAudacity.png" alt="Editing the shield shatter SFX clips">
+            
             <p>As for the gameplay music, it has been composed and mixed in the digital audio workstation Reason. My goal was to create a catchy, kind of epic Celtic-sounding tune that would be easy to associate with both witches dancing and battle, with mainly traditional instruments, a shuffle beat mixed with heavy percussion. The music has a few key parts to it, such as a calmer intro, a main gameplay section and a more intense section intended to play the first time either of the characters' shields is broken, reflecting the increased stakes and intensity of that part of the battle.</p>
 
             <h4>Gameplay music (full version)</h4>
@@ -184,7 +186,11 @@
             <p>Nearly all events make use of the Timeline, allowing for the use of loop regions and the placement of sound clips at different positions in the timeline. It also comes with a Master Track, where the combined output of all the sound clips in the event can be handled together.</p>
         
             <p>For the gameplay music event, I have used two loop regions (one for each level of match intensity) that work together with transition regions. This means that if a parameter value (see below) is changed, the current bar will finish playing through quantization and then jump to the designated parameter marker.</p>
-        
+
+            <img src="images/MusicRegions.png" alt="FMOD Event window for the music with regions and markers">
+
+            <img src="images/ShieldShatterFMOD.png" alt="The shield shatter event in FMOD">
+            
             <h4>The Parameters</h4>
         
             <p>I created several parameters for the purpose of changing the sounds playing in an event in an adaptive way.</p>
@@ -204,8 +210,7 @@
             </ul>
 
             <img src="images/OcclusionCurves.png" alt="Curves for the lowpass filter and volume used in the occlusion parameter">
-
-            <img src="images/MuiscRegions.png" alt="FMOD Event window for the music with regions and markers">
+            <img src="images/OcclusionCurves.png" alt="Curves for pitch and volume used in the altitude parameter">
             
             <h3>Unreal Engine</h3>
         
@@ -218,6 +223,8 @@
         
                 <li><b>Impact Emitter:</b> In order for impacts to make use of audio occlusion, they can't just be played at the impact location, since there would be nothing telling the sounds to check for occlusion. I therefore made an Actor Blueprint that can hold the Audio Occlusion Blueprint component, intended to spawn when a projectile is destroyed. The Impact Emitter actor will then play the intended impact FMOD event and destroy itself after 5 seconds, giving enough time for any of the impact sounds to finish playing.</li>
             </ul>
+
+            
         
             <h3>Testing</h3>
             
@@ -225,6 +232,7 @@
         
             <p>Occlusion testing was carried out using an audio testing static actor emitting a reasonably clear but moderately annoying alarm clock sound. The test actor was placed behind a ruin, with each line trace having a visual debug line. This was a very effective way of testing that the Audio Occlusion component did its job correctly.</p>
 
+            <img src="images/LineTraceScreen.png" alt="Testing the AudioOcclusion line traces in UE5">
             
             <p>In-game testing has been carried out as the FMOD events have been implemented in the engine. It was immediately clear that individual spell sound effects matched their visual effects very nicely, and the only adjustments needed to the FMOD events were minor volume changes. The wind ambience worked almost surprisingly well in-game during tests of the player character's altitude, and no adjustments were necessary in FMOD.</p>
         </section>
