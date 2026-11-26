@@ -102,7 +102,7 @@
             <ul>
                 <li>Using parameter seek speed to gradually change a parameter value for smooth transitions.</li>
         
-                <li>Using scatter instruments to randomly spawn sound effects during, for example, a loop, as opposed to multi instruments, which are more suited to playing sounds immediately or at a set point in each loop, with variation through settings such as Async and Offset.</li>
+                <li>Using scatterer instruments to randomly spawn sound effects during, for example, a loop, as opposed to multi instruments, which are more suited to playing sounds immediately or at a set point in each loop, with variation through settings such as Async and Offset.</li>
         
                <li>Using Async playback and random modulation of the Start Offset for further variation. This allows a sound clip to start playing from a randomly selected point within a set range each time, creating more variation in how the beginning of an event sounds.</li>
         
@@ -163,7 +163,7 @@
         
             <p>All combat events contain multiple sound clips, and all events make use of basic randomization, such as a random pitch shift for each individual clip, guaranteeing some basic variety each time the event is triggered. Furthermore, most of them contain Multi Instruments, which will play a sound at random (or in a predetermined shuffle order, if one so desires) from a list of sounds.</p>
         
-            <p>For the blood projectile, I opted to use the Scatter Instrument, so that during the projectile's travel sound loop, wet drop sounds will spawn at a random rate and volume between intervals set beforehand, simulating the sound of blood dripping from the projectile (but the actual sound is that of water, I promise!). Similarly, I used a Scatter Instrument for the Astral Homing Projectile, simulating sparkles (as one imagines stars sound like for some reason) appearing at random while the other "main" sound clips run through their loops.</p>
+            <p>For the blood projectile, I opted to use the scatterer Instrument, so that during the projectile's travel sound loop, wet drop sounds will spawn at a random rate and volume between intervals set beforehand, simulating the sound of blood dripping from the projectile (but the actual sound is that of water, I promise!). Similarly, I used a scatterer Instrument for the Astral Homing Projectile, simulating sparkles (as one imagines stars sound like for some reason) appearing at random while the other "main" sound clips run through their loops.</p>
         
             <p>Several longer sound clips, such as the projectiles, use the Async (as in asynchronous playback) option, allowing me to use random modulation of the Start Offset to determine where they start playing (for instance, somewhere between 0 and 20% into the clip), adding even further variation. To guarantee a smooth start and end where needed, I used AHDSR Modulation (Attack, Hold, Decay, Sustain and Release), which, in short, determines how fast the sound should reach a certain volume level and then go back to zero. I used this primarily for events with loops, which by definition don't have a natural start or end in their waveform, so that the sound doesn't just "cut in" and "cut out".</p>
         
