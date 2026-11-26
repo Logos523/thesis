@@ -65,6 +65,10 @@ p {
     color: var(--muted);
 }
 
+ul, ol, li {
+    color: var(--muted);
+}
+
 /* Links */
 
 a {
