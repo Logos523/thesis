@@ -154,7 +154,15 @@
             <p>I will only touch on this very briefly, as this has more to do with sound design, editing and composition than game programming (although technically speaking, the music is also programmed in a sequencer!). For sound effects, I have used free-to-use (and no-attribution-needed) sound effects from online resources, and then edited, combined and exported these in a uniform WAV format as assets ready for use. The editing phase has mostly consisted of cutting, moving and applying various effects to the waveform. I have mainly been using the audio editor Audacity for this. My aim has been to achieve distinct, easily recognizable sounds for spells, impacts and movement (made to match the visual effects in the game), as well as non-intrusive ambience in the form of wind that increases in intensity with player altitude, along with the eerie sounds of loon birds. The UI button click sounds are very straightforward and functional.</p>
         
             <p>As for the gameplay music, it has been composed and mixed in the digital audio workstation Reason. My goal was to create a catchy, kind of epic Celtic-sounding tune that would be easy to associate with both witches dancing and battle, with mainly traditional instruments, a shuffle beat mixed with heavy percussion. The music has a few key parts to it, such as a calmer intro, a main gameplay section and a more intense section intended to play the first time either of the characters' shields is broken, reflecting the increased stakes and intensity of that part of the battle.</p>
-        
+
+            <h3>Gameplay music (full version)</h3>
+            
+            <audio controls preload="metadata">
+                <source src="audio/ArmoredWitchFULL.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+            </audio>
+            <br>
+            
             <h3>FMOD Events and Parameters</h3>
         
             <p>The work in FMOD is also divided into two main parts: placing and processing the sounds in events (with different effects and manipulation through loops, etc.) and then assigning parameters to be changed in Unreal Engine, thereby allowing for adaptive changes in the audio during gameplay.</p>
@@ -222,7 +230,6 @@
         
             <p>I also think I have managed to establish a natural link between, for example, the launch, projectile and impact sound effects, while the launch and impact effects also have enough of their own distinctiveness to make them easily separable to the ear. Overall, the sound effects and music feel like they are part of the same setting, and I think there is good cohesion both between the audio assets themselves and between the audio and the rest of the game.</p>
         
-
             <h3>Audio Samples</h3>
         
             <audio controls preload="metadata">
@@ -231,7 +238,7 @@
             </audio>
             <br>
             <audio controls preload="metadata">
-                <source src="audio/MyBoneDemo.wav" type="audio/wav">
+                <source src="audio/BoneDemo.wav" type="audio/wav">
                 Your browser does not support audio playback.
             </audio>
             <br>
