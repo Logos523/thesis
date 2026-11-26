@@ -155,13 +155,15 @@
         
             <p>As for the gameplay music, it has been composed and mixed in the digital audio workstation Reason. My goal was to create a catchy, kind of epic Celtic-sounding tune that would be easy to associate with both witches dancing and battle, with mainly traditional instruments, a shuffle beat mixed with heavy percussion. The music has a few key parts to it, such as a calmer intro, a main gameplay section and a more intense section intended to play the first time either of the characters' shields is broken, reflecting the increased stakes and intensity of that part of the battle.</p>
 
-            <h3>Gameplay music (full version)</h3>
+            <h4>Gameplay music (full version)</h4>
             
             <audio controls preload="metadata">
                 <source src="audio/ArmoredWitchFULL.mp3" type="audio/mpeg">
                 Your browser does not support audio playback.
             </audio>
             <br>
+
+            <img src="images/ReasonScreen1.png" alt="Making music can be programming too!">
             
             <h3>FMOD Events and Parameters</h3>
         
@@ -200,7 +202,11 @@
         
                 <li><b>Round Finished</b>: Exactly the same setup and functionality as Shield Destroyed, but instead skips to the quite dramatic end-"DUH-DUHN" of the music track when the round/match is over.</li>
             </ul>
-       
+
+            <img src="images/OcclusionCurves.png" alt="Curves for the lowpass filter and volume used in the occlusion parameter">
+
+            <img src="images/MuiscRegions.png" alt="FMOD Event window for the music with regions and markers">
+            
             <h3>Unreal Engine</h3>
         
             <p>My work in Unreal Engine for this thesis has primarily consisted of first setting up an independent test level for initial FMOD functionality and viability, and later making Blueprints for the adaptive parts of the audio. Below follows a brief description of these and their main purpose and functionality.</p>
@@ -230,7 +236,7 @@
         
             <p>I also think I have managed to establish a natural link between, for example, the launch, projectile and impact sound effects, while the launch and impact effects also have enough of their own distinctiveness to make them easily separable to the ear. Overall, the sound effects and music feel like they are part of the same setting, and I think there is good cohesion both between the audio assets themselves and between the audio and the rest of the game.</p>
         
-            <h3>Audio Samples</h3>
+            <h4>Audio Samples</h4>
         
             <audio controls preload="metadata">
                 <source src="audio/AstralDemo.wav" type="audio/wav">
