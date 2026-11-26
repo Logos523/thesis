@@ -192,6 +192,11 @@
         
                 <li><b>Round Finished</b>: Exactly the same setup and functionality as Shield Destroyed, but instead skips to the quite dramatic end-"DUH-DUHN" of the music track when the round/match is over.</li>
             </ul>
+
+             <video controls preload="metadata">
+                <source src="video/MusicParams.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
         
             <h3>Unreal Engine</h3>
         
@@ -210,11 +215,6 @@
             <p>Testing was initially carried out in a custom audio test level I set up with a stationary spell emitter shooting a homing projectile object at the player. This was primarily used as a controlled environment to test the viability of the Astral Projectile tremolo and potential similar effects.</p>
         
             <p>Occlusion testing was carried out using an audio testing static actor emitting a reasonably clear but moderately annoying alarm clock sound. The test actor was placed behind a ruin, with each line trace having a visual debug line. This was a very effective way of testing that the Audio Occlusion component did its job correctly.</p>
-
-            <video controls preload="metadata">
-                <source src="video/OcclusionTest.mp4" type="video/mp4">
-                Your browser does not support video playback.
-            </video>
 
             
             <p>In-game testing has been carried out as the FMOD events have been implemented in the engine. It was immediately clear that individual spell sound effects matched their visual effects very nicely, and the only adjustments needed to the FMOD events were minor volume changes. The wind ambience worked almost surprisingly well in-game during tests of the player character's altitude, and no adjustments were necessary in FMOD.</p>
